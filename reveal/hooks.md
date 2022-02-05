@@ -128,8 +128,28 @@ React は状態が変わると再レンダリングします。
 
 ---
 
+線が入っている箇所は再レンダリングされている。
+`useMome`を利用したほうがレンダリングが抑えられている。
+
 <div style="width: 100%; display: flex;">
-  <img src="/dist/assets/hooks-render-nostate.png" />
-  <img src="/dist/assets/hooks-render-yesstate.png" />
+  <div style="flex: 1 1 auto">
+    <img src="/dist/assets/hooks-render-nostate.png" />
+  </div>
+  <div style="flex: 1 1 auto">
+    <img src="/dist/assets/hooks-render-yesstate.png" />
+  </div>
 </div>
 ---
+
+再レンダリングは、以下の Chrome 拡張で見ることができます。
+
+開発者ツールの Profiler タブから'Highlight updates when components render.'にチェック！
+
+<div style="width: 100%; display: flex;">
+  <div style="flex: 1 1 auto">
+    <img src="/dist/assets/hooks-react-extention.png" />
+  </div>
+  <div style="flex: 1 1 auto">
+    <img src="/dist/assets/hooks-devtool.png" />
+  </div>
+</div>
