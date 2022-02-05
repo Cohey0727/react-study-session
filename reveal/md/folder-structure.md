@@ -170,6 +170,88 @@ $ npx create-react-app folder-structure-app --template typescript
 
 ### ここで登場するのが **Atomic デザイン**
 
-⚠️ ここからは記事の内容と逸れます。
+#### ⚠️ ここからは私の考察。
 
 ---
+
+Atomic デザインを採用する目的
+
+→ 再利用性を高め、コンポーネントの複雑さを回避する。
+
+---
+
+### フォルダ構成
+
+```
+src
+└── components
+    ├── atoms
+    ├── molecules
+    ├── organisms
+    ├── pages
+    └── templates
+
+```
+
+---
+
+### 役割
+
+| フォルダ  | 役割                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------- |
+| atoms     | 最も小さいコンポーネント。複数の JSX で構成されることは少なく、スタイルのみを適用する。もっとも再利用される。 |
+| molecules | atoms やライブラリから複数の JSX を組み合わせてできるコンポーネント。ビジネスロジックは持たない。             |
+| organisms | molecules や atoms ライブラリから複数の JSX を組み合わせてできるコンポーネント。ビジネスロジックを持つ。      |
+| pages     | ルーティングされるコンポーネント。organisms 間の状態のやり取りや画面の構成を実装する。                        |
+| templates | pages で共通するものを切り出すコンポーネント。ヘッダーやナビゲーションなど。                                  |
+
+---
+
+こうすることで 2 階層までというルールを設けても molecules や organisms では、すでにカスタマイズ済みのコンポーネントが利用できるため巨大になりにくい。
+
+---
+
+ところで、ビジネスロジックとは？
+
+---
+
+- ビジネスロジックがないといえるもの
+
+  - プロダクト固有の属性や名詞が入っていない
+  - そのコンポーネントが別のプロダクトで必要なときにデザイン以外の変更が必要にならない
+
+- 例
+  - customer や user → ビジネスロジックである
+  - label や value → ビジネスロジックでない
+
+---
+
+### カルテ画面をサンプルに分解してみる。
+
+---
+
+ページ全体を organism に分解
+
+![titan](/dist/assets/folder-structure-component1.png "titan")
+
+---
+
+organism を nested organism に分解 ①
+
+![titan](/dist/assets/folder-structure-component2.png "titan")
+
+---
+
+organism を nested organism に分解 ②
+
+![titan](/dist/assets/folder-structure-component3.png "titan")
+
+---
+
+organism を nested organism に分解 ③
+
+![titan](/dist/assets/folder-structure-component4.png "titan")
+
+---
+
+おしまい
