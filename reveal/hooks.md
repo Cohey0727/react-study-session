@@ -16,7 +16,7 @@
 
 そもそも state(状態)とはなんなのか？
 
-なぜ useState とか useMemo いうやつを使う必要があるのか？
+なぜ useState とか useMemo とかいうやつを使う必要があるのか？
 
 ---
 
