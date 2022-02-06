@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Component1 /> */}
-        <Component4 />
+        <Component2 />
+        {/* <Component4 /> */}
       </header>
     </div>
   );

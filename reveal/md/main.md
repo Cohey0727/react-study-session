@@ -1,9 +1,9 @@
-第一回 React 勉強会
+# 第一回 React 勉強会
 
 ---
 
-## アジェンダ
+<h2 style="text-align:left;">アジェンダ</h2>
 
 - React hooks
-- Props の設計
 - フォルダ構成
+- Props の設計

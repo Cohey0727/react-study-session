@@ -1,4 +1,4 @@
-## フォルダ構成
+# フォルダ構成
 
 ---
 
@@ -121,6 +121,12 @@ $ npx create-react-app folder-structure-app --template typescript
     <img src="/dist/assets/folder-structure-code5.png" />
   </div>
 </div>
+
+---
+
+また Style について
+kalonade では style は JSS(CSS in JS)なのでコンポーネント内に書くことが多いが
+この記事で css モジュールとしてインポートしている
 
 ---
 

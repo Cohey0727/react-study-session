@@ -110,6 +110,10 @@ React は状態が変わると再レンダリングします。
 
 では状態が変わるとは？
 
+ヒント！
+
+![hooks](/dist/assets/hooks-reference.png "hooks")
+
 ---
 
 ### 状態が変わる ≒ 参照が変わる
